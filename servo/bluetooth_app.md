@@ -17,8 +17,9 @@ void loop() {
   // put your main code here, to run repeatedly:
   if (Serial.available() > 0) {
     int pos = Serial.read();
-
-    myservo.write(pos);
+    if (pos >= 0 && pos <= 180) {
+      myservo.write(pos);
+    }
   }
 }
 ```
