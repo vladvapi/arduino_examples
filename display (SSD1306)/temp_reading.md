@@ -170,6 +170,6 @@ void loop() {
   else Serial.println("error starting temperature measurement\n");
 
   display.clearDisplay();
-  delay(2000);  // Pause for 5 seconds.
+  delay(2000);  // Pause for 2 seconds.
 }
 ```
