@@ -8,7 +8,7 @@
 
 #include <SFE_BMP180.h>
 #include <Wire.h>
-#define ALTITUDE 1655.0
+#define ALTITUDE 300
 
 SFE_BMP180 pressure;
 
