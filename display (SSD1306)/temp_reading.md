@@ -81,8 +81,7 @@ void setup() {
   // initialize the OLED object
   if (!display.begin(SSD1306_SWITCHCAPVCC, SCREEN_ADDRESS)) {
     Serial.println(F("SSD1306 allocation failed"));
-    for (;;)
-      ;
+    while(1); // Pause forever.
   }
 
   // Clear the buffer.
