@@ -30,10 +30,6 @@ Adafruit_PWMServoDriver pwm = Adafruit_PWMServoDriver();
 
 #define freq 50
 
-
-
-int servonum = 7;
-
 int beatrice[8][2] = {
   {s0min, s0max},
   {s1min, s1max},
@@ -48,29 +44,26 @@ int beatrice[8][2] = {
 void setup() {
   Serial.begin(9600);
   pwm.begin();
-
+ 
    pwm.setOscillatorFrequency(27000000);
   pwm.setPWMFreq(freq);
 
   delay(10);
-
-  for(int i = 0; i <= 6; i++){
-    pwm.writeMicroseconds(i, beatrice[i][1]);
-    delay(500);
-  }
 }
 
 void loop() {
-  // for (int microsec = s7min; microsec < s7max; microsec++) {
-  //   pwm.writeMicroseconds(servonum, microsec);
-  // }
+  for(int servonum = 0; servonum <= 6; servonum++){
+    pwm.writeMicroseconds(servonum, beatrice[servonum][0]);
+    delay(20);
+  }
 
-  // delay(500);
+  delay(2000);
 
-  // for (int microsec = s7max; microsec > s7min; microsec--) {
-  //   pwm.writeMicroseconds(servonum, microsec);
-  // }
+  for(int servonum = 0; servonum <= 6; servonum++){
+    pwm.writeMicroseconds(servonum, beatrice[servonum][1]);
+    delay(20);
+  }
 
-  // delay(500);
+  delay(2000);
 }
 ```
