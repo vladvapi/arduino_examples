@@ -82,7 +82,7 @@ void setup() {
   Serial.begin(9600);
   pwm.begin();
  
-   pwm.setOscillatorFrequency(27000000);
+  pwm.setOscillatorFrequency(27000000);
   pwm.setPWMFreq(freq);
 
   delay(10); 
