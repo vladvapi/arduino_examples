@@ -247,8 +247,4 @@ void loop() {
   afis9();
   delay(1000);
 }
-  }
-
-  delay(2000);
-}
 ```
