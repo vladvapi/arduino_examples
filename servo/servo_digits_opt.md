@@ -33,33 +33,33 @@ Adafruit_PWMServoDriver pwm = Adafruit_PWMServoDriver();
 int k = 0;
 
 int beatrice[8][2] = {
-  {s0min, s0max},
-  {s1min, s1max},
-  {s2min, s2max},
-  {s3min, s3max},
-  {s4min, s4max},
-  {s5min, s5max},
-  {s6min, s6max},
-  {s7min, s7max}
+  { s0min, s0max },
+  { s1min, s1max },
+  { s2min, s2max },
+  { s3min, s3max },
+  { s4min, s4max },
+  { s5min, s5max },
+  { s6min, s6max },
+  { s7min, s7max }
 };
 
-int digits[10][7]= {
-  {1,1,1,1,1,1,0}, // 0
-  {0,1,1,0,0,0,0}, // 1
-  {1,1,0,1,1,0,1}, // 2
-  {1,1,1,1,0,0,1}, // 3
-  {0,1,1,0,0,1,1}, // 4
-  {1,0,1,1,0,1,1}, // 5
-  {1,0,1,1,1,1,1}, // 6
-  {1,1,1,0,0,0,0}, // 7
-  {1,1,1,1,1,1,1}, // 8
-  {1,1,1,1,0,1,1}  // 9
+int digits[10][7] = {
+  { 1, 1, 1, 1, 1, 1, 0 },  // 0
+  { 0, 1, 1, 0, 0, 0, 0 },  // 1
+  { 1, 1, 0, 1, 1, 0, 1 },  // 2
+  { 1, 1, 1, 1, 0, 0, 1 },  // 3
+  { 0, 1, 1, 0, 0, 1, 1 },  // 4
+  { 1, 0, 1, 1, 0, 1, 1 },  // 5
+  { 1, 0, 1, 1, 1, 1, 1 },  // 6
+  { 1, 1, 1, 0, 0, 0, 0 },  // 7
+  { 1, 1, 1, 1, 1, 1, 1 },  // 8
+  { 1, 1, 1, 1, 0, 1, 1 }   // 9
 };
 
 // sol mea:
 
-void display_digit(int d){
-  for(int servo = 0; servo < 7; servo++){
+void display_digit(int d) {
+  for (int servo = 0; servo < 7; servo++) {
     pwm.writeMicroseconds(servo, beatrice[servo][digits[d][servo]]);
     delay(20);
   }
@@ -67,12 +67,12 @@ void display_digit(int d){
 
 // sol tata:
 
-void display_digit2(int d){
+void display_digit2(int d) {
   int* digit = digits[d];
 
-  for(int servo = 0; servo < 7; servo++){
-    int position = digit[servo]; // 0 or 1
-    int value = beatrice[servo][position]; // min or max
+  for (int servo = 0; servo < 7; servo++) {
+    int position = digit[servo];            // 0 or 1
+    int value = beatrice[servo][position];  // min or max
     pwm.writeMicroseconds(servo, value);
     delay(20);
   }
@@ -81,11 +81,11 @@ void display_digit2(int d){
 void setup() {
   Serial.begin(9600);
   pwm.begin();
- 
+
   pwm.setOscillatorFrequency(27000000);
   pwm.setPWMFreq(freq);
 
-  delay(10); 
+  delay(10);
 }
 
 void loop() {
@@ -93,7 +93,7 @@ void loop() {
 
   k++;
 
-  if(k > 9) k = 0;
+  if (k > 9) k = 0;
 
   delay(1000);
 }
