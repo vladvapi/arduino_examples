@@ -41,6 +41,166 @@ int beatrice[8][2] = {
   {s7min, s7max}
 };
 
+void afis0(){
+  pwm.writeMicroseconds(0, beatrice[0][1]);
+  delay(20);
+  pwm.writeMicroseconds(1, beatrice[1][1]);
+  delay(20);
+  pwm.writeMicroseconds(2, beatrice[2][1]);
+  delay(20);
+  pwm.writeMicroseconds(3, beatrice[3][1]);
+  delay(20);
+  pwm.writeMicroseconds(4, beatrice[4][1]);
+  delay(20);
+  pwm.writeMicroseconds(5, beatrice[5][1]);
+  delay(20);
+  pwm.writeMicroseconds(6, beatrice[6][0]);
+}
+
+void afis1(){
+  pwm.writeMicroseconds(0, beatrice[0][0]);
+  delay(20);
+  pwm.writeMicroseconds(1, beatrice[1][1]);
+  delay(20);
+  pwm.writeMicroseconds(2, beatrice[2][1]);
+  delay(20);
+  pwm.writeMicroseconds(3, beatrice[3][0]);
+  delay(20);
+  pwm.writeMicroseconds(4, beatrice[4][0]);
+  delay(20);
+  pwm.writeMicroseconds(5, beatrice[5][0]);
+  delay(20);
+  pwm.writeMicroseconds(6, beatrice[6][0]);
+}
+
+void afis2(){
+  pwm.writeMicroseconds(0, beatrice[0][1]);
+  delay(20);
+  pwm.writeMicroseconds(1, beatrice[1][1]);
+  delay(20);
+  pwm.writeMicroseconds(2, beatrice[2][0]);
+  delay(20);
+  pwm.writeMicroseconds(3, beatrice[3][1]);
+  delay(20);
+  pwm.writeMicroseconds(4, beatrice[4][1]);
+  delay(20);
+  pwm.writeMicroseconds(5, beatrice[5][0]);
+  delay(20);
+  pwm.writeMicroseconds(6, beatrice[6][1]);
+}
+
+void afis3(){
+  pwm.writeMicroseconds(0, beatrice[0][1]);
+  delay(20);
+  pwm.writeMicroseconds(1, beatrice[1][1]);
+  delay(20);
+  pwm.writeMicroseconds(2, beatrice[2][1]);
+  delay(20);
+  pwm.writeMicroseconds(3, beatrice[3][1]);
+  delay(20);
+  pwm.writeMicroseconds(4, beatrice[4][0]);
+  delay(20);
+  pwm.writeMicroseconds(5, beatrice[5][0]);
+  delay(20);
+  pwm.writeMicroseconds(6, beatrice[6][1]);
+}
+
+void afis4(){
+  pwm.writeMicroseconds(0, beatrice[0][0]);
+  delay(20);
+  pwm.writeMicroseconds(1, beatrice[1][1]);
+  delay(20);
+  pwm.writeMicroseconds(2, beatrice[2][1]);
+  delay(20);
+  pwm.writeMicroseconds(3, beatrice[3][0]);
+  delay(20);
+  pwm.writeMicroseconds(4, beatrice[4][0]);
+  delay(20);
+  pwm.writeMicroseconds(5, beatrice[5][1]);
+  delay(20);
+  pwm.writeMicroseconds(6, beatrice[6][1]);
+}
+
+void afis5(){
+  pwm.writeMicroseconds(0, beatrice[0][1]);
+  delay(20);
+  pwm.writeMicroseconds(1, beatrice[1][0]);
+  delay(20);
+  pwm.writeMicroseconds(2, beatrice[2][1]);
+  delay(20);
+  pwm.writeMicroseconds(3, beatrice[3][1]);
+  delay(20);
+  pwm.writeMicroseconds(4, beatrice[4][0]);
+  delay(20);
+  pwm.writeMicroseconds(5, beatrice[5][1]);
+  delay(20);
+  pwm.writeMicroseconds(6, beatrice[6][1]);
+}
+
+void afis6(){
+  pwm.writeMicroseconds(0, beatrice[0][1]);
+  delay(20);
+  pwm.writeMicroseconds(1, beatrice[1][0]);
+  delay(20);
+  pwm.writeMicroseconds(2, beatrice[2][1]);
+  delay(20);
+  pwm.writeMicroseconds(3, beatrice[3][1]);
+  delay(20);
+  pwm.writeMicroseconds(4, beatrice[4][1]);
+  delay(20);
+  pwm.writeMicroseconds(5, beatrice[5][1]);
+  delay(20);
+  pwm.writeMicroseconds(6, beatrice[6][1]);
+}
+
+void afis7(){
+  pwm.writeMicroseconds(0, beatrice[0][1]);
+  delay(20);
+  pwm.writeMicroseconds(1, beatrice[1][1]);
+  delay(20);
+  pwm.writeMicroseconds(2, beatrice[2][1]);
+  delay(20);
+  pwm.writeMicroseconds(3, beatrice[3][0]);
+  delay(20);
+  pwm.writeMicroseconds(4, beatrice[4][0]);
+  delay(20);
+  pwm.writeMicroseconds(5, beatrice[5][0]);
+  delay(20);
+  pwm.writeMicroseconds(6, beatrice[6][0]);
+}
+
+void afis8(){
+  pwm.writeMicroseconds(0, beatrice[0][1]);
+  delay(20);
+  pwm.writeMicroseconds(1, beatrice[1][1]);
+  delay(20);
+  pwm.writeMicroseconds(2, beatrice[2][1]);
+  delay(20);
+  pwm.writeMicroseconds(3, beatrice[3][1]);
+  delay(20);
+  pwm.writeMicroseconds(4, beatrice[4][1]);
+  delay(20);
+  pwm.writeMicroseconds(5, beatrice[5][1]);
+  delay(20);
+  pwm.writeMicroseconds(6, beatrice[6][1]);
+}
+
+void afis9(){
+  pwm.writeMicroseconds(0, beatrice[0][1]);
+  delay(20);
+  pwm.writeMicroseconds(1, beatrice[1][1]);
+  delay(20);
+  pwm.writeMicroseconds(2, beatrice[2][1]);
+  delay(20);
+  pwm.writeMicroseconds(3, beatrice[3][1]);
+  delay(20);
+  pwm.writeMicroseconds(4, beatrice[4][0]);
+  delay(20);
+  pwm.writeMicroseconds(5, beatrice[5][1]);
+  delay(20);
+  pwm.writeMicroseconds(6, beatrice[6][1]);
+}
+
 void setup() {
   Serial.begin(9600);
   pwm.begin();
@@ -48,20 +208,45 @@ void setup() {
    pwm.setOscillatorFrequency(27000000);
   pwm.setPWMFreq(freq);
 
-  delay(10);
+  delay(10); 
 }
 
 void loop() {
-  for(int servonum = 0; servonum <= 6; servonum++){
-    pwm.writeMicroseconds(servonum, beatrice[servonum][0]);
-    delay(20);
-  }
+  // for(int servonum = 0; servonum <= 6; servonum++){
+  //   pwm.writeMicroseconds(servonum, beatrice[servonum][0]);
+  //   delay(20);
+  // }
 
-  delay(2000);
+  // delay(2000);
 
-  for(int servonum = 0; servonum <= 6; servonum++){
-    pwm.writeMicroseconds(servonum, beatrice[servonum][1]);
-    delay(20);
+  // for(int servonum = 0; servonum <= 6; servonum++){
+  //   pwm.writeMicroseconds(servonum, beatrice[servonum][1]);
+  //   delay(20);
+  // }
+
+  // delay(2000);
+
+  afis0();
+  delay(1000);
+  afis1();
+  delay(1000);
+  afis2();
+  delay(1000);
+  afis3();
+  delay(1000);
+  afis4();
+  delay(1000);
+  afis5();
+  delay(1000);
+  afis6();
+  delay(1000);
+  afis7();
+  delay(1000);
+  afis8();
+  delay(1000);
+  afis9();
+  delay(1000);
+}
   }
 
   delay(2000);
